@@ -2,7 +2,7 @@
   "name": "filmoteka",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antontarasiuk.github.io/filmoteka/",
+  "homepage": "https://antontarasiuk.github.io/fIlmoteka/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
