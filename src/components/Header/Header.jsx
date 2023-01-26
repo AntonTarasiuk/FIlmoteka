@@ -3,6 +3,7 @@ import React, {useLayoutEffect, useState} from "react";
 import { HeaderMain } from "./Header.styled";
 import { Logo } from "components/Logo/Logo";
 import { Navigation } from "components/Navigation/Navigation";
+import { MovieSearch } from "components/SearchForm/SearchForm";
 
 // import { ContactEl, ContactNumber, DeleteButton } from "./Contact.styled";
 
@@ -12,14 +13,16 @@ export const Header = () => {
 
     console.log(ratio)
     console.log(width)
+
     useLayoutEffect(() => {
         setWidth(window.innerWidth);
-        setRatio(window.devicePixelRatio)
+        setRatio(window.devicePixelRatio);       
     }, []);
 
     return <HeaderMain windowWidth={width} ratio={ratio}>
-        <Logo size={24}  windowWidth={width}></Logo>
+        <Logo size={24} windowWidth={width}></Logo>
         <Navigation></Navigation>
+        <MovieSearch size={24}></MovieSearch>
     </HeaderMain>
 }
 

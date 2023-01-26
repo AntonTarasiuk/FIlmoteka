@@ -15,17 +15,30 @@ export const HeaderMain = styled.header`
     background-position: center;
 
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(${props => {
-            if (props.width < 768) {
-                return (props.ratio > 1 ? headerHomeMobile2x : headerHomeMobile)
-            } else if (props.width >= 768 & props.width < 1024) {
-                return props.ratio > 1 ? headerHomeTablet2x : headerHomeTablet
-            } else {
-                return props.ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop
-            }
-        }});
-  }
+        url(${props => props.ratio > 1 ? headerHomeMobile2x : headerHomeMobile});
+
+        
+    @media screen and (min-width: 768px){
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(${props => props.ratio > 1 ? headerHomeTablet2x : headerHomeTablet})
+    }
+
+    @media screen and (min-width: 1024px) {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(${props => props.ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop})
+    }
 `
+    // background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    //     url(${({windowWidth, ratio}) => {
+    //         if (windowWidth < 768) {
+    //             return (ratio > 1 ? headerHomeMobile2x : headerHomeMobile)
+    //         } else if (windowWidth >= 768 & windowWidth < 1024) {
+    //             return ratio > 1 ? headerHomeTablet2x : headerHomeTablet
+    //         } else {
+    //             return ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop
+    //         }
+    //     }});
+
     // display: flex;
     // flex-direction: column;
     // align-items: center;

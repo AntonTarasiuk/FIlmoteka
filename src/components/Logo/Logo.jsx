@@ -15,6 +15,7 @@ export const Logo = ({ size,  windowWidth }) => {
 
 Logo.propTypes = {
     size: PropTypes.number.isRequired,
+    windowWidth: PropTypes.number.isRequired,
 }
 
 

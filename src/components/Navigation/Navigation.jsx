@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types';
 
 export const Navigation = () => {
-    return
+    return 
 }
 
 // Logo.propTypes = {
