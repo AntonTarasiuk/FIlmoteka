@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
 }
 
 code {
@@ -27,9 +28,6 @@ code {
   outline: 0;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
 
 img {
   display: block;
@@ -61,8 +59,6 @@ a {
 }
 
 button {
-  min-height: 44px;
-
   font-family: inherit;
   cursor: pointer;
 }

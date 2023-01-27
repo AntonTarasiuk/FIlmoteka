@@ -8,7 +8,7 @@ export const MovieSearch = ({ size }) => {
 
     const handleChacge = e => {
         const { value } = e.currentTarget;
-console.log(value)
+
         setSearchValue(value)
     }
 
@@ -20,19 +20,19 @@ console.log(value)
 
     return (
         <SearchForm onSubmit={handlerSubmit}>
-            <SearchField type="text" name='searchValue' value={searchValue} onChange={ handleChacge } />
+            <SearchField
+                type="text"
+                name='searchValue'
+                value={searchValue}
+                onChange={handleChacge}
+                autocomplete="off"
+                placeholder="Search movies" />
             <SearchFormButton>
                 <svg width={size} height={size}>
                     <use xlinkHref={`${sprite}#icon-search`} />
                 </svg>
             </SearchFormButton>
         </SearchForm>
-        // <LogoLink href="./index.html">
-        //     <svg width={size} height={size}>
-        //         <use xlinkHref={`${sprite}#icon-logo`} />
-        //     </svg>
-        //     {windowWidth > 767 && <p>Filmoteka</p>}
-        // </LogoLink>
     )
 }
 

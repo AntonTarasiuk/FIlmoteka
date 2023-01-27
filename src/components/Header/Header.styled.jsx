@@ -44,3 +44,20 @@ export const HeaderMain = styled.header`
     // align-items: center;
     // font-size: 20px;
     // color: #010101;
+
+export const SearchMsg = styled.p`
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: left;
+    color: #FF001B;
+
+    margin: 0 auto;
+
+    max-width: 336px;
+
+    @media screen and (min-width: 768px) {
+        text-align: center;
+        max-width: 400px;
+    }    
+`

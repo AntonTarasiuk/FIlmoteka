@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { LogoLink } from './Logo.styled';
+import { LogoLink, LogoIcon, LogoLabel } from './Logo.styled';
 import sprite from "../../images/sprite.svg"
 
-export const Logo = ({ size,  windowWidth }) => {
+export const Logo = ({ windowWidth }) => {
     return (
         <LogoLink href="./index.html">
-            <svg width={size} height={size}>
+            <LogoIcon width="24" height="24">
                 <use xlinkHref={`${sprite}#icon-logo`} />
-            </svg>
-            {windowWidth > 767 && <p>Filmoteka</p>}
+            </LogoIcon>
+            {windowWidth >= 768 && <LogoLabel>Filmoteka</LogoLabel>}
         </LogoLink>
     )
 }
