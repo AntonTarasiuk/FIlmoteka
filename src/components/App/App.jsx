@@ -1,13 +1,12 @@
 import { Header } from "components/Header/Header";
-import { MovieList } from "components/MovieList/MovieList";
 import { Footer } from "components/Footer/Footer";
-
+import { Main } from "components/Main/Main";
 
 export const App = () => {
   return (
     <div>
       <Header/>
-      <MovieList/>
+      <Main/>
       <Footer/>
     </div>
   );

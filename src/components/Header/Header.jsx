@@ -1,10 +1,10 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
 // import PropTypes from 'prop-types';
-import { HeaderMain } from "./Header.styled";
+import { HeaderSection, HeaderContainer, SearchMsg } from "./Header.styled";
 // import { Logo } from "components/Logo/Logo";
 import { Navigation } from "components/Navigation/Navigation";
 import { MovieSearch } from "components/SearchForm/SearchForm";
-import { SearchMsg } from "./Header.styled";
+// import { SearchMsg } from "./Header.styled";
 
 // import { ContactEl, ContactNumber, DeleteButton } from "./Contact.styled";
 
@@ -32,12 +32,15 @@ export const Header = () => {
 
     
 
-    return <HeaderMain ref={ref} windowWidth={width} ratio={ratio}>
-        {/* <Logo></Logo> */}
-        <Navigation size={24} windowWidth={width}></Navigation>
-        <MovieSearch size={12}></MovieSearch>
-        <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
-    </HeaderMain>
+    return (
+        <HeaderSection ref={ref} windowWidth={width} ratio={ratio}>
+            <HeaderContainer>
+                <Navigation size={24} windowWidth={width}></Navigation>
+                <MovieSearch size={12}></MovieSearch>
+                <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
+            </HeaderContainer>
+        </HeaderSection>
+    )
 }
 
 // Contact.propTypes = {

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const NavBar = styled.div`
+export const NavBar = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
