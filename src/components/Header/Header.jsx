@@ -28,7 +28,7 @@ export const Header = () => {
     }, []);
 
     return (
-        <HeaderSection ref={ref} windowWidth={width} ratio={ratio}>
+        <HeaderSection ref={ref} windowWidth={width} ratio={ratio} page={"home"}>
             <HeaderContainer>
                 <Navigation size={24} windowWidth={width} />
                 <MovieSearch size={12} />

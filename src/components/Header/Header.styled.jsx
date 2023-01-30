@@ -6,6 +6,13 @@ import headerHomeTablet2x from "../../images/header-home-tablet@2x.jpg";
 import headerHomeDesktop from "../../images/header-home.jpg";
 import headerHomeDesktop2x from "../../images/header-home@2x.jpg";
 
+import headerLibraryMobile from "../../images/header-library-mobile.jpg";
+import headerLibraryMobile2x from "../../images/header-library-mobile@2x.jpg";
+import headerLibraryTablet from "../../images/header-library-tablet.jpg";
+import headerLibraryTablet2x from "../../images/header-library-tablet@2x.jpg";
+import headerLibraryDesktop from "../../images/header-library.jpg";
+import headerLibraryDesktop2x from "../../images/header-library@2x.jpg";
+
 export const HeaderSection = styled.section`
     // color: ${props => console.log(props )};
     min-height: 230px;
@@ -16,19 +23,40 @@ export const HeaderSection = styled.section`
     background-position: center;
 
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(${props => props.ratio > 1 ? headerHomeMobile2x : headerHomeMobile});
+        url(${({ windowWidth, ratio, page }) => {
+            if (page === 'library') {
+                if (windowWidth >= 768 & windowWidth < 1024) {
+                    return ratio > 1 ? headerLibraryTablet2x : headerLibraryTablet
+                } else if (windowWidth >= 1024) {
+                    return ratio > 1 ? headerLibraryDesktop2x : headerLibraryDesktop
+                } else {
+                    return (ratio > 1 ? headerLibraryMobile2x : headerLibraryMobile)
+                }
+            }
+            if (windowWidth >= 768 & windowWidth < 1024) {
+                return ratio > 1 ? headerHomeTablet2x : headerHomeTablet
+            } else if (windowWidth >= 1024) {
+                return ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop
+            } else {
+                return (ratio > 1 ? headerHomeMobile2x : headerHomeMobile)
+            }
+        }});
+`
+
+
+    // background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    //     url(${props => props.ratio > 1 ? headerHomeMobile2x : headerHomeMobile});
 
         
-    @media screen and (min-width: 768px){
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(${props => props.ratio > 1 ? headerHomeTablet2x : headerHomeTablet})
-    }
+    // @media screen and (min-width: 768px){
+    //     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    //     url(${props => props.ratio > 1 ? headerHomeTablet2x : headerHomeTablet})
+    // }
 
-    @media screen and (min-width: 1024px) {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(${props => props.ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop})
-    }
-`
+    // @media screen and (min-width: 1024px) {
+    //     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    //     url(${props => props.ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop})
+    // }
 
 export const HeaderContainer = styled.div`
     padding: 0 20px;
@@ -47,22 +75,6 @@ export const HeaderContainer = styled.div`
         width: 1024px;
     }
 `
-    // background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    //     url(${({windowWidth, ratio}) => {
-    //         if (windowWidth < 768) {
-    //             return (ratio > 1 ? headerHomeMobile2x : headerHomeMobile)
-    //         } else if (windowWidth >= 768 & windowWidth < 1024) {
-    //             return ratio > 1 ? headerHomeTablet2x : headerHomeTablet
-    //         } else {
-    //             return ratio > 1 ? headerHomeDesktop2x : headerHomeDesktop
-    //         }
-    //     }});
-
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // font-size: 20px;
-    // color: #010101;
 
 export const SearchMsg = styled.p`
     font-weight: 400;
