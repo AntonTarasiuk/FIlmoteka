@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const MainSection = styled.section`
-    background-color: #fff;
+    background-color: ${props => props.theme.colors.headerTextColor};
     min-height: 900px;
     padding-top: 20px;
     padding-bottom: 20px;

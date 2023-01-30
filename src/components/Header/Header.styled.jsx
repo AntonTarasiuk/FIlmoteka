@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
-import headerHomeMobile from "../../images/header-home-mobile.jpg"
-import headerHomeMobile2x from "../../images/header-home-mobile@2x.jpg"
-import headerHomeTablet from "../../images/header-home-tablet.jpg"
-import headerHomeTablet2x from "../../images/header-home-tablet@2x.jpg"
-import headerHomeDesktop from "../../images/header-home.jpg"
-import headerHomeDesktop2x from "../../images/header-home@2x.jpg"
+import headerHomeMobile from "../../images/header-home-mobile.jpg";
+import headerHomeMobile2x from "../../images/header-home-mobile@2x.jpg";
+import headerHomeTablet from "../../images/header-home-tablet.jpg";
+import headerHomeTablet2x from "../../images/header-home-tablet@2x.jpg";
+import headerHomeDesktop from "../../images/header-home.jpg";
+import headerHomeDesktop2x from "../../images/header-home@2x.jpg";
 
 export const HeaderSection = styled.section`
+    // color: ${props => console.log(props )};
     min-height: 230px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0;
+    // padding: 40px 0 60px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +69,7 @@ export const SearchMsg = styled.p`
     font-size: 14px;
     line-height: 1.14;
     text-align: left;
-    color: #FF001B;
+    color: ${props => props.theme.colors.errorTextColor};
 
     margin: 0 auto;
 
@@ -76,6 +77,7 @@ export const SearchMsg = styled.p`
 
     @media screen and (min-width: 768px) {
         text-align: center;
+        
         max-width: 400px;
     }    
 `

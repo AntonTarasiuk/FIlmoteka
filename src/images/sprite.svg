@@ -6,11 +6,11 @@
 <symbol id="icon-search" viewBox="0 0 32 32">
 <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M14.667 25.333c5.891 0 10.667-4.776 10.667-10.667s-4.776-10.667-10.667-10.667v0c-5.891 0-10.667 4.776-10.667 10.667s4.776 10.667 10.667 10.667v0zM28 28l-5.8-5.8"></path>
 </symbol>
-<symbol id="icon-pagination-left" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.666" d="M25.341 16.005h-18.673M16.005 25.341l-9.337-9.337 9.337-9.337"></path>
+<symbol id="icon-pagination-left" viewBox="0 0 24 24">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.666" d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
 </symbol>
-<symbol id="icon-pagination-right" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.666" d="M6.668 16.005h18.673M16.005 25.341l9.337-9.337-9.337-9.337"></path>
+<symbol id="icon-pagination-right" viewBox="0 0 24 24" transform="rotate(180)">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.666" d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
 </symbol>
 <symbol id="icon-heart" viewBox="0 0 32 32">
 <path fill="#ff6b08" style="fill: var(--color3, #ff6b08)" d="M16.010 30.164l-2.241-2.219c-8.325-7.292-13.769-12.209-13.769-18.229 0-4.92 3.842-8.721 8.806-8.721 2.722 0.002 5.444 1.269 7.205 3.328 1.762-2.021 4.331-3.298 7.2-3.326l0.005-0c4.963 0 8.806 3.804 8.806 8.717 0 6.024-5.444 10.94-13.769 18.229l-2.241 2.221z"></path>

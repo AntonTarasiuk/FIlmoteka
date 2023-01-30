@@ -6,9 +6,10 @@ export const NavBar = styled.nav`
     align-items: center;
 
     margin-left: auto;
-    margin-bottom: 54px;
+    // margin-bottom: 54px;
+    margin-bottom: 60px;
 
-    color: #fff;
+    color: ${props => props.theme.colors.headerTextColor};
 
     @media screen and (min-width: 768px){
         margin-bottom: 40px;
@@ -16,19 +17,33 @@ export const NavBar = styled.nav`
 `
 
 export const NavButton = styled.p`
-    color: #fff;
+    position: relative;
+
+    color: ${props => props.theme.colors.headerTextColor};
     font-weight: 500;
     font-size: 12px;
     line-height: 1.17;
     text-transform: uppercase;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color ${props => props.theme.cubic};
 
     :hover {
-        color: #FF6B08
+        color: ${props => props.theme.colors.accentColor};
     }
 
     :not(:last-child) {
         margin-right: 40px;
+    }
+
+    ::after {
+        position: absolute;
+        
+        content: '';
+        width: 100%;
+        height: 3px;
+        left: 0;
+        display: block;
+        background-color: #FF6B08;
+        border-radius: 2px;
     }
 `

@@ -21,10 +21,10 @@ export const LogoLabel = styled.p`
     font-weight: 500;
     font-size: 30px;
     line-height: 1.17;
-    color: #FFFFFF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: ${props => props.theme.colors.headerTextColor};
+    transition: color ${props => props.theme.cubic};
 
     :hover{
-        color: #FF6B08;
+        color: ${props => props.theme.colors.accentColor};
     }
 `

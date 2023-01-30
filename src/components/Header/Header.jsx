@@ -1,12 +1,9 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
 // import PropTypes from 'prop-types';
 import { HeaderSection, HeaderContainer, SearchMsg } from "./Header.styled";
-// import { Logo } from "components/Logo/Logo";
 import { Navigation } from "components/Navigation/Navigation";
 import { MovieSearch } from "components/SearchForm/SearchForm";
-// import { SearchMsg } from "./Header.styled";
-
-// import { ContactEl, ContactNumber, DeleteButton } from "./Contact.styled";
+import { HeaderLibraryBtns } from "components/HeaderLibraryBtns/HeaderLibraryBtns";
 
 export const Header = () => {
     const ref = useRef(null);
@@ -30,14 +27,13 @@ export const Header = () => {
         };
     }, []);
 
-    
-
     return (
         <HeaderSection ref={ref} windowWidth={width} ratio={ratio}>
             <HeaderContainer>
-                <Navigation size={24} windowWidth={width}></Navigation>
-                <MovieSearch size={12}></MovieSearch>
-                <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
+                <Navigation size={24} windowWidth={width} />
+                {/* <MovieSearch size={12} /> */}
+                <HeaderLibraryBtns />
+                {/* <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg> */}
             </HeaderContainer>
         </HeaderSection>
     )
