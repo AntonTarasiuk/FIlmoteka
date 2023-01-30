@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fIlmoteka/static/css/main.b0cd2b8c.css",
-    "main.js": "/fIlmoteka/static/js/main.2cc85a38.js",
+    "main.js": "/fIlmoteka/static/js/main.494478ba.js",
     "static/media/no-poster.jpg": "/fIlmoteka/static/media/no-poster.6f37e1ce193ffbfc0dc2.jpg",
     "static/media/header-home@2x.jpg": "/fIlmoteka/static/media/header-home@2x.3a1ba3ebdcfb1757e3b3.jpg",
     "static/media/header-home-tablet@2x.jpg": "/fIlmoteka/static/media/header-home-tablet@2x.d63a593c614f94c1da7f.jpg",
@@ -9,13 +9,13 @@
     "static/media/header-home.jpg": "/fIlmoteka/static/media/header-home.bf88268286b4ebad60b2.jpg",
     "static/media/header-home-tablet.jpg": "/fIlmoteka/static/media/header-home-tablet.54ce3120b4880a2b3aed.jpg",
     "static/media/header-home-mobile.jpg": "/fIlmoteka/static/media/header-home-mobile.a8ff241a7c156916c39a.jpg",
-    "static/media/sprite.svg": "/fIlmoteka/static/media/sprite.5dba5fd07e9cae84dbd5e091a0e6ef00.svg",
+    "static/media/sprite.svg": "/fIlmoteka/static/media/sprite.3fecefc44b1c7d22e4542d9800af2bf3.svg",
     "index.html": "/fIlmoteka/index.html",
     "main.b0cd2b8c.css.map": "/fIlmoteka/static/css/main.b0cd2b8c.css.map",
-    "main.2cc85a38.js.map": "/fIlmoteka/static/js/main.2cc85a38.js.map"
+    "main.494478ba.js.map": "/fIlmoteka/static/js/main.494478ba.js.map"
   },
   "entrypoints": [
     "static/css/main.b0cd2b8c.css",
-    "static/js/main.2cc85a38.js"
+    "static/js/main.494478ba.js"
   ]
 }
