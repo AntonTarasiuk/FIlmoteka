@@ -31,9 +31,9 @@ export const Header = () => {
         <HeaderSection ref={ref} windowWidth={width} ratio={ratio}>
             <HeaderContainer>
                 <Navigation size={24} windowWidth={width} />
-                {/* <MovieSearch size={12} /> */}
-                <HeaderLibraryBtns />
-                {/* <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg> */}
+                <MovieSearch size={12} />
+                {/* <HeaderLibraryBtns /> */}
+                <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
             </HeaderContainer>
         </HeaderSection>
     )
