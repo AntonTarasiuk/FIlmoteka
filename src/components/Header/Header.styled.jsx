@@ -14,7 +14,6 @@ import headerLibraryDesktop from "../../images/header-library.jpg";
 import headerLibraryDesktop2x from "../../images/header-library@2x.jpg";
 
 export const HeaderSection = styled.section`
-    // color: ${props => console.log(props )};
     min-height: 230px;
     padding: 40px 0;
     // padding: 40px 0 60px;

@@ -60,6 +60,11 @@ export const MovieTitle = styled.h3`
     line-height: 1.33;
 `
 
+export const MovieEditionalInfo = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
 export const MovieGenres = styled.p`
     color: ${props => props.theme.colors.accentColor};
     font-weight: 500;
@@ -67,13 +72,18 @@ export const MovieGenres = styled.p`
     line-height: 1.33;
 `
 
-export const MovieYearBefore = styled.span`
-    ::before {
-    content: '';
-    width: 1px;
-    height: 10px;
-    margin: 0 3px;
-    display: inline-block;
+export const MovieRaiting = styled.span`
+    align-self: center;
+
+    padding-right: 9px;
+    padding-left: 9px;
+    
     background-color: ${props => props.theme.colors.accentColor};
-}
+    border-radius: 5px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    font-weight: 500;
+    color: ${props => props.theme.colors.headerTextColor};
 `
+
