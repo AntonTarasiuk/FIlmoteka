@@ -58,6 +58,10 @@ export const FooterLink = styled.a`
     text-decoration: underline;
     transition: color ${props => props.theme.cubic};
 
+    :visited {
+        color: inherit;
+    }
+
     :hover,
     :focus {
         color: ${props => props.theme.colors.accentColor};
