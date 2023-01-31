@@ -44,11 +44,13 @@ export const FooterDeveloperInfo = styled.span`
 export const FooterIcon = styled.svg`
     margin: 0 10px;
 
-    animation: 1.5s ease 0s infinite beat;
-
-    @keyframes beat {
-      0%, 50%, 100% { transform: scale(1.1, 1.1); }
-      30%, 80% { transform: scale(0.92, 0.95); }
+    :hover {
+        animation: 1s ease 0s infinite beat;
+    
+        @keyframes beat {
+          40%, 60% { transform: scale(1.1, 1.2); }
+          50%, 100% { transform: scale(1, 0.95); }
+        }
     }
 `
 
