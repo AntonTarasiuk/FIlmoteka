@@ -73,16 +73,17 @@ export const MovieGenres = styled.p`
 `
 
 export const MovieRaiting = styled.span`
-    align-self: center;
+    display: block;
 
-    padding-right: 9px;
-    padding-left: 9px;
-    
+    width: 36px;
+    height: 16px;
+
     background-color: ${props => props.theme.colors.accentColor};
     border-radius: 5px;
 
+    text-align: center;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.2;
     font-weight: 500;
     color: ${props => props.theme.colors.headerTextColor};
 `
