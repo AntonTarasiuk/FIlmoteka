@@ -23,7 +23,7 @@ export const Movie = styled.li`
         }
     }
 
-    :not(:nth-last-child(-n+2)) {
+    :not(:nth-last-of-type(-n+2)) {
         @media screen and (min-width: 768px) {
             margin-bottom: 32px;
         }
@@ -33,7 +33,7 @@ export const Movie = styled.li`
         }
     }
 
-    :not(:nth-last-child(-n+3)) {
+    :not(:nth-last-of-type(-n+3)) {
         @media screen and (min-width: 1024px) {
             margin-bottom: 32px;
         }

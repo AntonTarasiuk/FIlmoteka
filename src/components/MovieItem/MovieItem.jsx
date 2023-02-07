@@ -10,8 +10,7 @@ const genres = [
 ]
 
 const shownGenres = 2
-const otherGenres = [...genres.slice(shownGenres, genres.length)];
-console.log(otherGenres)
+// const otherGenres = [...genres.slice(shownGenres, genres.length)];
         
 export const MovieItem = () => {
 

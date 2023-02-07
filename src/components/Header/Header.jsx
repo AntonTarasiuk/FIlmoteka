@@ -5,7 +5,7 @@ import { Navigation } from "components/Navigation/Navigation";
 import { MovieSearch } from "components/SearchForm/SearchForm";
 // import { HeaderLibraryBtns } from "components/HeaderLibraryBtns/HeaderLibraryBtns";
 
-export const Header = () => {
+export const Header = ({searchValue}) => {
     const ref = useRef(null);
     const [width, setWidth] = useState(0);
     const [ratio, setRatio] = useState(0);
@@ -31,7 +31,7 @@ export const Header = () => {
         <HeaderSection ref={ref} windowWidth={width} ratio={ratio} page={"home"}>
             <HeaderContainer>
                 <Navigation size={24} windowWidth={width} />
-                <MovieSearch size={12} />
+                <MovieSearch size={12} onSubmit={searchValue} />
                 {/* <HeaderLibraryBtns /> */}
                 <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
             </HeaderContainer>
