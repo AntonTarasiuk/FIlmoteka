@@ -12,15 +12,20 @@ const genres = [
 const shownGenres = 2
 // const otherGenres = [...genres.slice(shownGenres, genres.length)];
         
-export const MovieItem = () => {
+export const MovieItem = ({ openModalClick }) => {
 
     const genreList =
         genres.length <= shownGenres
         ? genres.join(', ')
         : genres[0] + ", " + genres[1] + ", Other"
     // console.log(arrayN)
+
+    const handleClick = () => {
+        openModalClick()
+    }
+
     return (
-        <Movie>
+        <Movie onClick={handleClick}>
             <MoviePoster src={noPosterImg} alt="Default poster img" />
             <MovieTitle>Movie</MovieTitle>
             <MovieEditionalInfo>

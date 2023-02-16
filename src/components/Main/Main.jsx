@@ -3,12 +3,12 @@ import { MovieList } from "components/MovieList/MovieList"
 import { TrendsBtnList } from "components/TrendsBtnList/TrendsBtnList"
 import { Paginator } from "components/Pagination/Pagination"
 
-export const Main = () => {
+export const Main = ({ openModalClick }) => {
     return (
         <MainSection>       
             <MainContainer>
                 <TrendsBtnList/>
-                <MovieList />
+                <MovieList openModalClick={ openModalClick } />
                 <Paginator />
             </MainContainer>
         </MainSection>

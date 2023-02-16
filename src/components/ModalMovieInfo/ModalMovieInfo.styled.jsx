@@ -1,113 +1,43 @@
 import styled from "@emotion/styled";
 
-export const Backdrop = styled.div`
-    display: flex;
-    justify-content: center;
-
-    position: fixed;
-    width: 100%;
-    height: 100%;
-
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-
-    overflow-y: scroll;
-    transition: opacity 500ms linear;
-    
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background: rgba(0, 0, 0, 0.25);;
-    background-repeat: no-repeat;
-    background-size: cover;
-`
-
-export const ModalWindow = styled.div`
-    display: block;
-    position: absolute;
-    width: 90%;
-
-    top: 20px;
-
-    z-index: 2;
-    
-    padding: 48px 20px 40px;
-
-    background-color: ${props => props.theme.colors.headerTextColor};
-    transition: opacity 500ms linear;
-
-    box-shadow:
-        5px 5px 5px 8px ${props => props.theme.colors.accentColor},
-        -5px -5px -5px 8px ${props => props.theme.colors.accentColor};
-
-    @media screen and (min-width: 768px) {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        width: 704px;
-
-        padding: 40px 36px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        width: 814px;
-
-        padding: 40px 16px;
-    }
-`
-
-export const ModalCloseBtn = styled.button`
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    top: 8px;
-    right: 8px;
-
-    min-width: 30px;
-    min-height: 30px;
-    padding: 0;
-
-    background-color: ${props => props.theme.colors.headerTextColor};
-    fill: red;
-    
-    :hover,
-    :focus{
-        fill: ${props => props.theme.colors.accentColor};
-    }
-`
-
 export const MovieInfoWrapper = styled.div`
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 240px;
 
     @media screen and (min-width: 768px) {
         display: flex;
+        flex-wrap: nowrap;
         justify-content: center;
         width: 100%;
     }
 `
 
 export const MoviePoster = styled.img`
-    margin: 0 auto 20px;
-    width: 100%;
-    height: auto;
+    display: inline;
+
+    margin-right: 10px;
+    width: 120px;
+    height: 100%;
 
     border-radius: 5px;
         
     @media screen and (min-width: 768px) {
         width: 264px;
+        height: 375px;
         margin: 0 68px 0 0;
     }
         
     @media screen and (min-width: 1024px) {
         width: 375px;
+        height: 480px;
         margin-right: 16px;
     }
 `
 
 export const MovieTitle = styled.h2`
+    margin-top: 20px;
     margin-bottom: 20px;
 
     font-size: 20px;
@@ -116,18 +46,43 @@ export const MovieTitle = styled.h2`
 
     text-transform: uppercase;
 
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    }
+
     @media screen and (min-width: 1024px) {
         font-size: 30px;
         line-height: 1.17;
     }
 `
 
+export const MobileMovieAttrList = styled.dl`
+    display: inline-block;
+
+    width: 110px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 20px;
+    }
+`
+
 export const MovieAttrList = styled.table`
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     width: 100%;
 
     border-collapse: separate;
     border-spacing: 0 8px;
+
+    @media screen and (min-width: 768px) {
+        // margin-bottom: 20px;
+    }
+`
+
+export const MobileMovieAttr = styled.dt`
+    color: ${props => props.theme.colors.secondTextColor};
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 500;
 `
 
 export const MovieAttr = styled.td`
@@ -138,6 +93,18 @@ export const MovieAttr = styled.td`
 
     width: 40%;
     padding-right: 4px;
+`
+
+export const MobileMovieAttrValue = styled.dd` 
+    display: inline-flex;
+   
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 500;
+
+    :not(:last-of-type) {
+        margin-bottom: 12px;
+    }
 `
 
 export const MovieAttrValue = styled.td` 
@@ -177,19 +144,15 @@ export const DescriptionSubtitle = styled.p`
 `
 
 export const Description = styled.p`
-    margin-bottom: 20px;
+    margin-bottom: auto;
 
     font-size:12px;
     line-height: 1.67;
     font-weight: 500;
 
     @media screen and (min-width: 768px) {
-        margin-bottom: 36px;
-    }
-    
-    @media screen and (min-width: 1024px) {
         margin-bottom: 20px;
-    }  
+    }
 `
 
 export const ModalBtnSet = styled.div`
@@ -236,4 +199,5 @@ export const ModalBtn = styled.button`
         @media screen and (min-width: 768px) {
             margin-right: 15px;
         }
+    }
 `
