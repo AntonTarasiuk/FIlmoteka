@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export const App = () => {
   const [showModal, setShowModal] = useState(false);
+  const [ searchValue, getSearchValue] = useState("")
   const [width, setWidth] = useState(window.innerWidth);
   const [ratio, setRatio] = useState(window.devicePixelRatio);
 
@@ -25,7 +26,7 @@ export const App = () => {
 
   return (
     <div>
-      <Header width={width} ratio={ratio} />
+      <Header width={width} ratio={ratio} searchValue={ getSearchValue } />
       <Main openModalClick={() => setShowModal(!showModal)} />
       {showModal &&
         <Modal closeModal={() => setShowModal(!showModal)}>

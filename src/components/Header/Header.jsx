@@ -4,7 +4,7 @@ import { Navigation } from "components/Navigation/Navigation";
 import { MovieSearch } from "components/SearchForm/SearchForm";
 // import { HeaderLibraryBtns } from "components/HeaderLibraryBtns/HeaderLibraryBtns";
 
-export const Header = ({ width, ratio }) => {
+export const Header = ({ searchValue, width, ratio }) => {
     return (
         <HeaderSection windowWidth={width} ratio={ratio} page={"home"}>
             <HeaderContainer>
