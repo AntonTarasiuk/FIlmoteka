@@ -3,8 +3,8 @@ import { SearchForm, SearchField, SearchFormButton } from './SearchForm.styled';
 import sprite from "../../images/sprite.svg"
 import { useState } from 'react';
 
-export const MovieSearch = ({ size }) => {
-    const [searchValue, setSearchValue] = useState('');
+export const MovieSearch = ({ size, onSubmit }) => {
+    const [searchValue, setSearchValue] = useState("");
 
     const handleChacge = e => {
         const { value } = e.currentTarget;
@@ -15,7 +15,9 @@ export const MovieSearch = ({ size }) => {
     const handlerSubmit = e => {
         e.preventDefault();
 
-        this.props.onSubmit(searchValue);
+        onSubmit(searchValue);
+
+        setSearchValue("");
     }
 
     return (
@@ -27,7 +29,7 @@ export const MovieSearch = ({ size }) => {
                 onChange={handleChacge}
                 autocomplete="off"
                 placeholder="Search movies" />
-            <SearchFormButton>
+            <SearchFormButton type='submitt'>
                 <svg width={size} height={size}>
                     <use xlinkHref={`${sprite}#icon-search`} />
                 </svg>

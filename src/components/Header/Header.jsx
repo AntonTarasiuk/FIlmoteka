@@ -9,7 +9,7 @@ export const Header = ({ width, ratio }) => {
         <HeaderSection windowWidth={width} ratio={ratio} page={"home"}>
             <HeaderContainer>
                 <Navigation size={24} windowWidth={width} />
-                <MovieSearch size={12} />
+                <MovieSearch size={12} onSubmit={searchValue} />
                 {/* <HeaderLibraryBtns /> */}
                 <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
             </HeaderContainer>
