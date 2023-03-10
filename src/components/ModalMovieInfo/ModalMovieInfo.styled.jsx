@@ -2,16 +2,23 @@ import styled from "@emotion/styled";
 
 export const MovieInfoWrapper = styled.div`
     display: flex;
+    // flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 240px;
 
     @media screen and (min-width: 768px) {
+        flex-direction: row;
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         width: 100%;
     }
+`
+
+export const TextInfoWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 export const MoviePoster = styled.img`

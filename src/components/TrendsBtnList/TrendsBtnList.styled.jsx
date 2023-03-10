@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const TrendsBtns = styled.ul`
+export const Btns = styled.ul`
     display: flex;
     margin: 0 auto 20px;
 
@@ -9,8 +9,8 @@ export const TrendsBtns = styled.ul`
     }
 `
 
-export const TrendsBtnItem = styled.li`
-    :first-of-type {
+export const BtnItem = styled.li`
+    :not(:last-of-type) {
         margin-right: 20px;
 
         @media screen and (min-width: 768px) {
@@ -23,7 +23,7 @@ export const TrendsBtnItem = styled.li`
     }
 `
 
-export const TrendBtn = styled.button`
+export const Btn = styled.button`
     width: 130px;
     height: 44px;
     border-radius: 5px;

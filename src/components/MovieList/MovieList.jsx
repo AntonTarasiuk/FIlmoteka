@@ -1,19 +1,12 @@
-// import React from "react";
 import { MovieItem } from "components/MovieItem/MovieItem"
 import { MovieColection } from "./MovieList.styled"
 
-export const MovieList = ({ openModalClick }) => {
-    
+export const MovieList = ({ movieForRender, ...props }) => {
     return (
-        // <MainSection>       
-        //     <MovieContainer>
-                <MovieColection>
-                    <MovieItem  openModalClick={openModalClick} />
-                    <MovieItem  openModalClick={openModalClick} />
-                    <MovieItem  openModalClick={openModalClick} />
-                    <MovieItem  openModalClick={openModalClick} />
-                </MovieColection>
-        //     {/* </MovieContainer>
-        // </MainSection> */}
+        <MovieColection>
+            {movieForRender.map(movie => (
+                <MovieItem  key={movie.id} movie={movie} {...props} />
+            ))}
+        </MovieColection>
     )
 }

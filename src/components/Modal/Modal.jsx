@@ -34,27 +34,27 @@ export const Modal = ({ closeModal, children }) => {
 
     return createPortal(
         <AnimatePresence>           
-        <MotionBackdrop
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            onClick={handleBackdropClick}
-        >
-            <MotionModalWindow
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
+            <MotionBackdrop
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                // exit={{ opacity: 0 }}
                 transition={{ duration: 0.25 }}
+                onClick={handleBackdropClick}
             >
-                <ModalCloseBtn type="button" aria-label="close" onClick={handleModalClose}>
-                    <svg width="30" height="30">
-                        <use xlinkHref={`${sprite}#icon-close`} />
-                    </svg>
-                </ModalCloseBtn>
-                {children}
-            </MotionModalWindow>
-        </MotionBackdrop>
+                <MotionModalWindow
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    // exit={{ opacity: 0, scale: 0 }}
+                    transition={{ duration: 0.25 }}
+                >
+                    <ModalCloseBtn type="button" aria-label="close" onClick={handleModalClose}>
+                        <svg width="30" height="30">
+                            <use xlinkHref={`${sprite}#icon-close`} />
+                        </svg>
+                    </ModalCloseBtn>
+                    {children}
+                </MotionModalWindow>
+            </MotionBackdrop>
         </AnimatePresence>,
         modalRoot
     )

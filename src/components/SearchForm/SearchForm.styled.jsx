@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { Form, Field } from "formik";
 
-export const SearchForm = styled.form`
+export const SearchForm = styled(Form)`
     display: flex;
     margin: 0 auto 20px;
     max-width: 336px;
@@ -9,7 +10,7 @@ export const SearchForm = styled.form`
     align-items: center;
 `
 
-export const SearchField = styled.input`
+export const SearchField = styled(Field)`
     font-weight: 400;
     font-size: 14px;
     line-height: 1.14;

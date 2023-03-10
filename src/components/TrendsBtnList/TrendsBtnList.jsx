@@ -1,19 +1,19 @@
-import { TrendsBtns, TrendsBtnItem, TrendBtn } from "./TrendsBtnList.styled"
+import { Btns, BtnItem, Btn } from "./TrendsBtnList.styled"
 
-export const TrendsBtnList = () => {
+export const TrendsBtnList = ({setTimeWindow}) => {
     return (
-        <TrendsBtns>
-            <TrendsBtnItem>
-                <TrendBtn id="button-color-day">
+        <Btns>
+            <BtnItem>
+                <Btn id="button-color-day" onClick={() => setTimeWindow("day")}>
                     Daily Trends
-                </TrendBtn>
-            </TrendsBtnItem>
-            <TrendsBtnItem>
-                <TrendBtn id="button-color-week">
+                </Btn>
+            </BtnItem>
+            <BtnItem>
+                <Btn id="button-color-week" onClick={() => setTimeWindow("week")}>
                     Weekly Trends
-                </TrendBtn>
-            </TrendsBtnItem>
-        </TrendsBtns>
+                </Btn>
+            </BtnItem>
+        </Btns>
     )
     
 }

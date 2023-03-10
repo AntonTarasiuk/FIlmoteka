@@ -1,40 +1,33 @@
 import PropTypes from 'prop-types';
 import { SearchForm, SearchField, SearchFormButton } from './SearchForm.styled';
 import sprite from "../../images/sprite.svg"
-import { useState } from 'react';
+import { Formik } from 'formik';
 
-export const MovieSearch = ({ size, onSubmit }) => {
-    const [searchValue, setSearchValue] = useState("");
-
-    const handleChacge = e => {
-        const { value } = e.currentTarget;
-
-        setSearchValue(value)
-    }
-
-    const handlerSubmit = e => {
-        e.preventDefault();
-
-        onSubmit(searchValue);
-
-        setSearchValue("");
+export const MovieSearch = ({ size, searchValue }) => {
+    const handlerSubmit = (value, actions) => {
+        if (value === '') {
+            return
+        }
+        searchValue(value.searchValue);
+        actions.resetForm();
     }
 
     return (
-        <SearchForm onSubmit={handlerSubmit}>
-            <SearchField
-                type="text"
-                name='searchValue'
-                value={searchValue}
-                onChange={handleChacge}
-                autocomplete="off"
-                placeholder="Search movies" />
-            <SearchFormButton type='submitt'>
-                <svg width={size} height={size}>
-                    <use xlinkHref={`${sprite}#icon-search`} />
-                </svg>
-            </SearchFormButton>
-        </SearchForm>
+        <Formik initialValues={{ searchValue: '' }} onSubmit={handlerSubmit}>
+            {/* {({ isSubmitting }) => ( */}
+                <SearchForm>
+                    <SearchField
+                        type="text"
+                        name='searchValue'
+                        placeholder="Search movies" />
+                    <SearchFormButton type='submitt' >
+                        <svg width={size} height={size}>
+                            <use xlinkHref={`${sprite}#icon-search`} />
+                        </svg>
+                    </SearchFormButton>
+                </SearchForm>
+            {/* )} */}
+        </Formik>
     )
 }
 

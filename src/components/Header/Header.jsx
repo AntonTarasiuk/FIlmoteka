@@ -5,11 +5,12 @@ import { MovieSearch } from "components/SearchForm/SearchForm";
 // import { HeaderLibraryBtns } from "components/HeaderLibraryBtns/HeaderLibraryBtns";
 
 export const Header = ({ searchValue, width, ratio }) => {
+    // console.log(searchValue)
     return (
         <HeaderSection windowWidth={width} ratio={ratio} page={"home"}>
             <HeaderContainer>
                 <Navigation size={24} windowWidth={width} />
-                <MovieSearch size={12} onSubmit={searchValue} />
+                <MovieSearch size={12} searchValue={searchValue} />
                 {/* <HeaderLibraryBtns /> */}
                 <SearchMsg>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates laboriosam</SearchMsg>
             </HeaderContainer>
